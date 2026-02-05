@@ -1,0 +1,33 @@
+Q.  Why we can't use var?
+Ans:    1. JavaScript is used on millions of old websites written before ES6 (2015).
+        2. Function Scope Behavior: var is function-scoped, not block-scoped.
+            function test() {
+                var x = 10;
+            }
+            console.log(x); // Error
+        3. Hoisting Use Cases: var is hoisted and initialized as undefined.
+            console.log(a); // undefined
+            var a = 5;
+
+
+Q.  Is it possible to declare and initialize a variable in JavaScript without using var, let, or const? 
+    If yes, how? Why is it not a good practice?
+Ans:    Yes,it is possible in JS.
+        When a variable is assigned a value without using var, let, or const, JavaScript automatically creates a global variable.
+            Example:
+                x = 10;   // variable created without declaration keyword
+                console.log(x);
+        Here, JavaScript reserves memory, declares, and initializes the variable automatically.
+
+        It is not a good practice because this can lead to unexpected bugs, overwrite existing variables, make debugging difficult, and pollute the global scope.
+        It also breaks clean coding standards and is not allowed in strict mode.
+
+
+Q.    Why do JavaScript programs work even when semicolons are not used?
+Ans:    JavaScript has a feature called Automatic Semicolon Insertion (ASI), which allows the program to work even if semicolons are not written.
+        However, using semicolons is a good practice to avoid unexpected errors.
+
+
+Q.  Difference between console.log() and console.table()
+Ans:    
+
