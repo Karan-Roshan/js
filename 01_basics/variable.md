@@ -1,5 +1,5 @@
-Q.  Why we can't use var?
-Ans:    1. JavaScript is used on millions of old websites written before ES6 (2015).
+## Q.  Why we can't use var?
+Ans:    1. JavaScript is used on millions of old websites written before ES6     (2015).
         2. Function Scope Behavior: var is function-scoped, not block-scoped.
             function test() {
                 var x = 10;
@@ -28,6 +28,21 @@ Ans:    JavaScript has a feature called Automatic Semicolon Insertion (ASI), whi
         However, using semicolons is a good practice to avoid unexpected errors.
 
 
-Q.  Difference between console.log() and console.table()
-Ans:    
+Q. What problems do we face when using var in JavaScript?
+Ans:    1. No Block Scope: var is function-scoped, not block-scoped. So variables can be accessed outside blocks like if or for.
+        2. Allows Redeclaration: You can declare the same variable again, which can overwrite values.
+        3. Hoisting Confusion: var is hoisted and initialized as undefined.
+        4. Global Scope Pollution: Using var can accidentally create or affect global variables, especially in large apps.
+        5. Problems in Loops: var does not work well with loops and closures.
 
+
+Q. What is the Temporal Dead Zone (TDZ) in JavaScript?
+Ans:    The Temporal Dead Zone is the time between the start of a scope and the declaration of a let or const variable, during which the variable cannot be accessed.
+        OR
+        The Temporal Dead Zone is the period where let and const variables are hoisted but not initialized, so accessing them before declaration causes an error.
+            Example:
+                console.log(x);     // undefined
+                var x = 5;
+
+                console.log(a);     // ReferenceError
+                let a = 10;
