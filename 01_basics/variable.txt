@@ -1,4 +1,4 @@
-## Q.  Why we can't use var?
+Q.  Why we can't use var?
 Ans:    1. JavaScript is used on millions of old websites written before ES6     (2015).
         2. Function Scope Behavior: var is function-scoped, not block-scoped.
             function test() {
