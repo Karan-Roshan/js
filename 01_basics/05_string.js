@@ -1,4 +1,4 @@
-// ----- Strings -----
+// Strings
 const name = "karan"
 const repoCount = 50
 
