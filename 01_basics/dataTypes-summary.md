@@ -119,6 +119,7 @@ Non-primitive data types store **multiple values** and are stored by **reference
   </tbody>
 </table>
 
+<hr>
 
 # JavaScript typeof Verification Table
 <table border="1" cellpadding="8" cellspacing="0">
@@ -182,3 +183,5 @@ Non-primitive data types store **multiple values** and are stored by **reference
     </tr>
   </tbody>
 </table>
+
+<hr>
