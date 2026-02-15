@@ -14,5 +14,5 @@ let num = 11
 
 do {
     console.log(`Score is ${num}`);
-    score++
+    score++;
 } while (score <= 10);
