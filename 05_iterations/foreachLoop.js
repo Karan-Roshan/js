@@ -1,5 +1,5 @@
 // ----- foreach loop -----
-const coding = ["js", "ruby", "java", "python", "cpp"]
+const coding = ["js", "ruby", "java", "python", "cpp"];
 
 coding.forEach(function (item) {
     // console.log(item);
@@ -40,5 +40,13 @@ const myCoding = [
 
 myCoding.forEach((item) => {
     // console.log(item.languageName);
-    console.log(item.languageFileName);
+    // console.log(item.languageFileName);
 })
+
+
+// note: foreach loop never return any values
+const value = coding.forEach(item => {
+    // console.log(item);
+    return item;
+});
+console.log(value);
