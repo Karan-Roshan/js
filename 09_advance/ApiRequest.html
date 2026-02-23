@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Request</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <h2>XMLHttpRequest ReadyState Values</h2>
+    <p><strong>0 - UNSENT:</strong> Client has been created. open() not called yet.</p>
+    <p><strong>1 - OPENED:</strong> open() has been called.</p>
+    <p><strong>2 - HEADERS_RECEIVED:</strong> send() has been called, and headers and status are available.</p>
+    <p><strong>3 - LOADING:</strong> Downloading; responseText holds partial data.</p>
+    <p><strong>4 - DONE:</strong> The operation is complete.</p>
+
+    <script>
+        const requestUrl = "https://api.github.com/users/Karan-Roshan";
+        const xhr = new XMLHttpRequest();       // XMLHttpRequest is a built-in JavaScript object used to send and receive data from a server without reloading the page.
+        xhr.open("GET", requestUrl);
+        // console.log("Here");
+        // console.log(xhr.readyState);
+
+        xhr.onreadystatechange = function() {
+            console.log(xhr.readyState);        // readyState is a property of XMLHttpRequest that tells you the current state of the request.
+            if(xhr.readyState === 4) {
+                const data = JSON.parse(this.responseText);     // JSON.parse() is a built-in JavaScript method that converts a JSON string into a JavaScript object.
+                // console.log(data);
+                // console.log(typeof data);
+                console.log(data.followers);
+            }
+        }
+        xhr.send();
+    </script>
+</body>
+</html>
