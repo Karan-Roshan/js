@@ -20,7 +20,7 @@
         // console.log("Here");
         // console.log(xhr.readyState);
 
-        xhr.onreadystatechange = function() {
+        xhr.onreadystatechange = function() {   // onreadystatechange is an event handler that runs every time the readyState changes during an HTTP request. It helps you track the progress of the request step-by-step.
             console.log(xhr.readyState);        // readyState is a property of XMLHttpRequest that tells you the current state of the request.
             if(xhr.readyState === 4) {
                 const data = JSON.parse(this.responseText);     // JSON.parse() is a built-in JavaScript method that converts a JSON string into a JavaScript object.
